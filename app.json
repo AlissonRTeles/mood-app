@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "MindMood",
+    "slug": "mindmood",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "mindmood",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#EFDFD5"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.mindmood"
+    },
+    "android": {
+      "package": "com.example.mindmood",
+      "adaptiveIcon": {
+        "backgroundColor": "#EFDFD5"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-web-browser"
+    ]
+  }
+}
