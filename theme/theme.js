@@ -119,17 +119,9 @@ const MOOD_PALETTE = {
 
 export const getMoodPalette = (scheme = 'light') => MOOD_PALETTE[scheme] ?? MOOD_PALETTE.light;
 
-// Cor de texto (ícone/rótulo) que contrasta com a cor da bolha da emoção.
-const isLightHex = (hex) => {
-  const h = hex.replace('#', '');
-  const r = parseInt(h.substring(0, 2), 16);
-  const g = parseInt(h.substring(2, 4), 16);
-  const b = parseInt(h.substring(4, 6), 16);
-  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-  return lum > 0.62;
-};
-
-export const moodTextOn = (hex) => (isLightHex(hex) ? '#1C1C1E' : '#F8F8F2');
+// Cor de texto (ícone/rótulo) sobre a bolha da emoção — sempre escura,
+// para manter todas as bolhas consistentes (inclusive vermelho e azul).
+export const moodTextOn = () => '#1C1C1E';
 
 // Emoções do "Daily Mood Log" — chave gravada no banco
 // `icon` é um nome de ícone do MaterialCommunityIcons (@expo/vector-icons)
